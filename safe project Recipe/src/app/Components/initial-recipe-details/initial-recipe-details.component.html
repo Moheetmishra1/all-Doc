@@ -1,0 +1,16 @@
+<div class="card">
+<main>
+<div class="imageBox">
+        <img [src]="details().image" alt="">
+    <nav *appIsAdmin>
+        <a [routerLink]="['/update',details().id]"><button class="update" ><div>Update</div></button></a>
+        <button class="delete" (click)="deleteRecipe()"><div>Delete</div></button>
+    </nav>
+    </div>
+    <div class="details" >
+        <div class="star">{{star()}}</div>
+        <div class="reviews">{{details().reviewCount}} REVIEWS/{{details().rating}} AVERAGE</div>
+        <div class="title">{{details().name}}</div>
+    </div>
+</main>
+</div>
